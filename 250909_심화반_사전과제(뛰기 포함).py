@@ -5,10 +5,10 @@ class Bird:
         self.fly = fly
         self.speed = speed
 
-    def sound(self):
+    def play_sound(self):
         print(f"{self.name}(이)가 '{self.sound}' 울음소리를 냈습니다")
 
-    def fly(self):
+    def play_fly(self):
         print(f"{self.name}(이)가 {self.fly}")
 
     def run(self):
@@ -38,8 +38,8 @@ if bird not in birds:
     print("등록되지 않은 새입니다")
 else:
     actions = {
-        "짹": birds[bird].sound,
-        "날기": birds[bird].fly,
+        "짹": birds[bird].play_sound,
+        "날기": birds[bird].play_fly,
         "뛰기": birds[bird].run
     }
     func = actions.get(action)
